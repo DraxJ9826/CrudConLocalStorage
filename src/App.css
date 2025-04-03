@@ -1,38 +1,100 @@
-.App {
+/* Estilo personalizado para el Navbar */
+.navbar-custom {
+  background-color: #343a40 !important;
+}
+
+.navbar-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+.navbar-link:hover {
+  color: #ffc107;
+}
+
+/* Estilo para el contenedor de la aplicación */
+.container {
+  margin-top: 50px;
+}
+
+/* Estilo para el título de la aplicación */
+h2 {
+  color: #000000;
+  font-size: 1.8rem;
   text-align: center;
+  margin-bottom: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Estilo para el input de agregar una nueva tarea */
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Estilos de los botones */
+button {
+  margin-top: 10px;
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+/* Botón de crear tarea */
+.btn-create {
+  background-color: #007bff;
+  border: none;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* Botón de eliminar tarea */
+.btn-delete {
+  background-color: #dc3545;
+  border: none;
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Botón de actualizar tarea */
+.btn-update {
+  background-color: #ffc107;
+  border: none;
+  color: white;
+}
+
+/* Estilo de la tabla */
+.custom-table {
+  margin-top: 30px;
+  border-radius: 8px;
+  width: 100%;
+}
+
+/* Estilo de las celdas de la tabla */
+.custom-table th, .custom-table td {
+  padding: 12px;
+  text-align: center;
+}
+
+/* Estilo para los encabezados de la tabla */
+.custom-table th {
+  background-color: #343a40;
+  color: white;
+}
+
+/* Estilo para las filas alternadas */
+.custom-table tbody tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+/* Estilo para el input de actualización */
+.update-input {
+  width: 80%;
+  padding: 8px;
+  margin-right: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
 }
