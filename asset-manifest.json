@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/CrudConLocalStorage/static/css/main.b9859c8a.css",
+    "main.js": "/CrudConLocalStorage/static/js/main.da7a023e.js",
+    "static/js/453.67bc29aa.chunk.js": "/CrudConLocalStorage/static/js/453.67bc29aa.chunk.js",
+    "index.html": "/CrudConLocalStorage/index.html",
+    "main.b9859c8a.css.map": "/CrudConLocalStorage/static/css/main.b9859c8a.css.map",
+    "main.da7a023e.js.map": "/CrudConLocalStorage/static/js/main.da7a023e.js.map",
+    "453.67bc29aa.chunk.js.map": "/CrudConLocalStorage/static/js/453.67bc29aa.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b9859c8a.css",
+    "static/js/main.da7a023e.js"
+  ]
+}
