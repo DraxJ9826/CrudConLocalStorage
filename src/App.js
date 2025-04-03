@@ -7,6 +7,10 @@ export default function App() {
   const [nuevaTarea, setNuevaTarea] = useState('');
   const [actualizarTarea, setActualizarTarea] = useState({});  // Usamos un objeto para almacenar las actualizaciones por tarea
 
+
+/**Queria agregar un modo de "chequeo" por si hay tareas 
+ * repetidas pero no logre encontrar la logica*/
+
   // Efecto para guardar en el localstorage
   useEffect(() => {
     const leerTarea = () => {
