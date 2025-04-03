@@ -108,7 +108,7 @@ export default function App() {
   };
 
   return (
-    <div>
+    <div className="app-container">
       <Navbar className="navbar-custom">
         <Navbar.Brand href="https://docs.google.com/document/d/1kCrLEF4QpvclDBGoOEG4XU21zx4fV5QA/edit?tab=t.0" target="_blank" className="navbar-link">
           CRUD Joshua Rivera
@@ -176,6 +176,16 @@ export default function App() {
           </Col>
         </Row>
       </Container>
-    </div>
-  );
+      {/* Footer */}
+    <footer className="footer">
+      <Container>
+        <Row>
+          <Col className="text-center">
+            <p> CRUD Joshua Rivera. Maestria En Ciencias De Datos Para Negocios &copy; 2025.</p>
+          </Col>
+        </Row>
+      </Container>
+    </footer>
+  </div>
+);
 }
