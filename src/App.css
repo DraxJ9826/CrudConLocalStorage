@@ -8,6 +8,7 @@
 /* Estilo personalizado para el Navbar */
 .navbar-custom {
   background-color: #141111c9 !important;
+  text-align: center;
 }
 .navbar-link {
   color: #ffffff;
@@ -22,7 +23,7 @@
 
 /* Estilo para el contenedor de la aplicación */
 .container {
-  margin-top: 50px;
+  margin-top: 20px;
 }
 
 /* Estilo para el título de la aplicación */
@@ -35,19 +36,23 @@ h2 {
 
 /* Estilo para el input de agregar una nueva tarea */
 input[type="text"] {
-  width: 100%;
+  width: 50%;
   padding: 10px;
-  margin-bottom: 15px;
+  margin: 0 auto 15px;
+  display: block;
   border-radius: 4px;
   border: 1px solid #ccc;
 }
 
 /* Estilos de los botones */
 button {
-  margin-top: 10px;
-  width: 100%;
+  margin: 10px auto 0;
+  width: 50%;
   padding: 12px;
   font-size: 1rem;
+  display: block;
+  text-align: center;
+  transition: background-color 0.3s, transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
 /* Botón de crear tarea */
@@ -55,7 +60,6 @@ button {
   background-color: #02be86;
   border: none;
   color: white;
-  transition: all 0.3s ease; /* Suaviza la transición */
 }
 .btn-create:hover {
   color: #ffffff;
@@ -66,31 +70,62 @@ button {
 
 /* Botón de eliminar tarea */
 .btn-delete {
+  width: 50%;
+  border-radius: 2rem;
   background-color: #dc3545;
   border: none;
   color: white;
-  transition: all 0.3s ease; /* Suaviza la transición */
 }
 .btn-delete:hover {
   color: #fff;
-  background-color: #8b1723; /* Cambio de color al pasar el mouse */
-  transform: scale(1.05); /* Efecto de aumento */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+  background-color: #8b1723;
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Botón de actualizar tarea */
 .btn-update {
+  width: 50%;
+  border-radius: 2rem;
   background-color: #ffc107;
   border: none;
   color: white;
-  transition: all 0.3s ease; /* Suaviza la transición */
+}
+.btn-update:hover {
+  color: #ffffff;
+  background-color: #856403;
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.btn-update:hover {
-  color: #ffffff; /* Cambia el color del texto */
-  background-color: #856403; /* Cambio de color al pasar el mouse */
-  transform: scale(1.05); /* Efecto de aumento */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+/* Botón de Permitir actualizar tarea */
+.btn-edit {
+  width: 50%;
+  border-radius: 2rem;
+  background-color: #ffc107;
+  border: none;
+  color: white;
+}
+.btn-edit:hover {
+  color: #ffffff;
+  background-color: #856403;
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Botón de cancelar edición */
+.btn-cancel {
+  width: 50%;
+  border-radius: 2rem;
+  background-color: #dc3545;
+  border: none;
+  color: white;
+}
+.btn-cancel:hover {
+  color: #fff;
+  background-color: #8b1723;
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Estilo de la tabla */
@@ -98,24 +133,47 @@ button {
   margin-top: 30px;
   border-radius: 8px;
   width: 100%;
+  table-layout: fixed;
+}
+.custom-table tbody tr:hover {
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 /* Estilo de las celdas de la tabla */
 .custom-table th, .custom-table td {
   padding: 12px;
   text-align: center;
+  font-weight: bold;
+  width: 15%;
 }
 
-/* Estilo para los encabezados de la tabla */
+/* Estilo para las celdas de la tabla (ajustar cada columna individualmente) */
+.custom-table th:nth-child(1), .custom-table td:nth-child(1) {
+  width: 25%;  /* Por ejemplo, la primera columna más ancha */
+}
+
+.custom-table th:nth-child(2), .custom-table td:nth-child(2) {
+  width: 25%;  /* Puedes ajustar el ancho de cada columna individualmente */
+}
+
+.custom-table th:nth-child(3), .custom-table td:nth-child(3) {
+  width: 25%;
+}
+
+.custom-table th:nth-child(4), .custom-table td:nth-child(4) {
+  width: 25%;
+}
+/* 
+Estilo para los encabezados de la tabla 
 .custom-table th {
   background-color: #343a40;
   color: white;
-}
+} */
 
-/* Estilo para las filas alternadas */
+ /* Estilo para las filas alternadas */
 .custom-table tbody tr:nth-child(odd) {
   background-color: #f2f2f2;
-}
+} 
 
 /* Estilo para el input de actualización */
 .update-input {
@@ -126,15 +184,23 @@ button {
   border: 1px solid #ccc;
 }
 
+/* Estilo del contenedor principal */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;  /* Esto asegura que el contenedor ocupe al menos el 100% de la altura de la pantalla */
+}
+
 /* Estilo para el Footer */
 .footer {
-  background-color: #343a40; 
-  color: white;  
-  padding: 20px 0; 
+  background-color: #343a40;
+  color: white;
+  padding: 20px 0;
   position: relative;
   bottom: 0;
   width: 100%;
-  margin-top: auto;
+  margin-top: auto;  /* Esto empuja el pie de página hacia abajo */
+  text-align: center;  /* Centra el texto dentro del footer */
 }
 
 .footer p {
@@ -142,11 +208,76 @@ button {
   font-size: 14px;
 }
 
-.footer a {
-  color: #ffc107;
-  text-decoration: none;
+/* Media Queries para responsividad */
+/* Para pantallas pequeñas */
+@media (max-width: 576px) {
+  .navbar-link {
+    font-size: 0.9rem;
+  }
+  
+  .custom-table {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  .btn-create, .btn-delete, .btn-update, .btn-edit {
+    width: 100%;
+  }
+
+  .update-input {
+    width: 100%;
+  }
 }
 
-.footer a:hover {
-  text-decoration: underline;
+/* Para pantallas medianas */
+@media (max-width: 768px) {
+  .container {
+    margin-top: 20px;
+  }
+
+  .custom-table th, .custom-table td {
+    padding: 8px;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  .btn-create, .btn-delete, .btn-update, .btn-edit {
+    width: 80%;
+  }
+
+  .update-input {
+    width: 80%;
+  }
+  .btn-cancel{
+    width: 80%;
+  }
+}
+
+/* Para pantallas grandes */
+@media (min-width: 1200px) {
+  .container {
+    margin-top: 30px;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+}
+
+/* Estilo del input de actualización cuando está en foco */
+.update-input:focus {
+  border-color: #02be86; /* Cambiar el color del borde al hacer foco */
+  background-color: #f9f9f9; /* Cambiar el fondo cuando está en foco */
+}
+
+/* Estilo para la tabla cuando se navega con el teclado */
+.custom-table tbody tr:focus-within {
+  outline: 2px solid #02be86; /* Agregar contorno cuando una celda esté en foco */
+  background-color: rgba(0, 0, 0, 0.2); /* Aumentar el contraste cuando se navega con teclado */
 }
